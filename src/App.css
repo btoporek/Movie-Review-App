@@ -22,27 +22,68 @@ body {
   padding-top: 70px;
 }
 
+.navbar-brand {
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+.nav-link {
+  font-size: larger;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.text {
+  font-size: 25px;
+}
+
+.container-fluid {
+  margin-bottom: 50px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  border-radius: 0px;
+}
+
 .card {
-  box-shadow: 1px 1px #a8a6a6, 2px 2px #dad8d8;
-  border: 1px solid 50% rgb(134, 131, 131);
-  margin: 20px;
   display: flex;
-  height: 100%;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+#movie-card {
+  margin-bottom: 0px;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
 }
 
 .card-header {
-  padding: 20px;
-  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 100%;
 }
 
 .card-body {
-  text-align: center;
-  height: 240px;
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 100%;
+}
+
+.card-text {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 #synopsis {
-  text-align: left;
+  height: 140px;
+  display: flex;
+  font-size: calc(0.78vw + 0.75vh);
+}
+
+.card-footer {
+  align-content: flex-start;
 }
 
 #genre {
@@ -50,6 +91,13 @@ body {
   border: 1px solid black;
   cursor: default;
   margin-bottom: 5px;
+  width: 50%;
+  align-self: center;
+}
+
+.btn-light:not([disabled]):not(.disabled):hover {
+  color: #111 !important;
+  background-color: #f8f9fa !important;
 }
 
 #review-name {
@@ -97,12 +145,8 @@ img {
   text-align: left;
 }
 
-#review-header {
-  text-align: center;
-}
-
-#reviews-div {
-  padding: 10px;
+#reviews-card {
+  flex-direction: column;
 }
 
 .App {
@@ -116,7 +160,6 @@ img {
 .form {
   align-items: center;
   width: 90%;
-  padding: 10px;
   text-align: left;
 }
 
@@ -126,14 +169,6 @@ img {
   font-size: 18px;
 }
 
-.movie-list {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-
-.movie {
-  margin: 20px;
-  padding: 10px;
-  width: 35rem;
+#movie {
+  padding-bottom: 40px;
 }

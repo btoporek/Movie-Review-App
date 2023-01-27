@@ -8,35 +8,55 @@ export const Movie = (props) => {
   const [reviews, setReviews] = useState([]);
   const [form, setForm] = useState({ review: "", id: uuidv4() });
   return (
-    <div className="container" id="movie">
-      <div className="col">
-        <div className="card bg-light mb-3" id="movie-card">
-          <div className="card-header">
-            <img src={props.image} alt="" />
-          </div>
-          <div className="card-body">
-            <h2 id="name">{props.name}</h2>
-            <button className="btn btn-sm" id="genre">
-              {props.genre}
-            </button>
-            <p id="synopsis">{props.synopsis}</p>
-          </div>
-          <div className="card-footer">
-            <h5>Rate this movie!</h5>
-            <Stars />
-            <Form
-              form={form}
-              reviews={reviews}
-              setForm={setForm}
-              setReviews={setReviews}
-            />
-          </div>
+    <div className="col-12 col-md-10 col-lg-4">
+      <div className="card bg-dark text-light mb-3" id="movie-card">
+        <div className="card-header">
+          <img src={props.movie.image} alt="" />
         </div>
-      </div>
-      <div className="card bg-light mb-3" id="reviews-div">
-        <h5 id="review-name">Reviews for {props.name}:</h5>
-        <ReviewList reviews={reviews} />
-        <p id="review-list">{props.reviews}</p>
+        <div className="card-text">
+          <h2 className="card-title" id="name">
+            {props.movie.name} {props.movie.date}
+          </h2>
+          <button className="btn btn-light btn-sm" id="genre">
+            {props.movie.genre}
+          </button>
+          <p id="synopsis">
+            {props.movie.synopsis}
+            <br></br>
+          </p>
+          <a
+            href={props.movie.trivia}
+            className="btn btn-warning"
+            id="trivia-button"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {props.movie.name} Trivia
+          </a>
+        </div>
+        <div className="card-body">
+          <h5>Rate this movie!</h5>
+          <Stars />
+          <br></br>
+          <Form
+            form={form}
+            reviews={reviews}
+            setForm={setForm}
+            setReviews={setReviews}
+          />
+        </div>
+        <div
+          className="card-footer bg-light text-dark rounded"
+          id="reviews-card"
+        >
+          <h5 className="card-title" id="review-name">
+            Reviews for {props.movie.name}:
+          </h5>
+          <p id="review-list">
+            <ReviewList reviews={reviews} />
+            {props.movie.reviews}
+          </p>
+        </div>
       </div>
     </div>
   );

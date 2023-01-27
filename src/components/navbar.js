@@ -6,10 +6,10 @@ export default class Navbar extends React.Component {
     // must use render()
     return (
       //insert HTML body below; check syntax needs for react (ex: className instead of class)
-      <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
+      <nav className="navbar navbar-expand-sm navbar-light bg-light">
         <div className="container">
           <a className="navbar-brand" href="#">
-            🎞️Movie Reviews
+            🎞️Movie Center
           </a>
           <button
             className="navbar-toggler"
@@ -35,6 +35,11 @@ export default class Navbar extends React.Component {
               <li className="nav-item">
                 <a className="nav-link" href="#">
                   Movie List
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#">
+                  Movie Trivia
                 </a>
               </li>
             </ul>
