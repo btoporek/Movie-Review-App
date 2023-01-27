@@ -5,7 +5,7 @@ import "./App.css";
 import Navbar from "./components/navbar";
 import Header from "./components/header";
 
-function App(props) {
+function App() {
   const movies = movieList.map((movie) => {
     return <Movie key={movie.id} movie={movie} />;
   });

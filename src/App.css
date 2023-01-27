@@ -79,7 +79,6 @@ body {
 #synopsis {
   height: 140px;
   display: flex;
-  font-size: calc(0.78vw + 0.75vh);
 }
 
 .card-footer {

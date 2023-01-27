@@ -8,7 +8,7 @@ export const Movie = (props) => {
   const [reviews, setReviews] = useState([]);
   const [form, setForm] = useState({ review: "", id: uuidv4() });
   return (
-    <div className="col-12 col-md-10 col-lg-4">
+    <div className="col-12 col-lg-6 col-xl-4">
       <div className="card bg-dark text-light mb-3" id="movie-card">
         <div className="card-header">
           <img src={props.movie.image} alt="" />
