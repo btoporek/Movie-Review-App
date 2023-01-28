@@ -102,6 +102,7 @@ body {
 #review-name {
   text-shadow: #333;
   font-style: oblique;
+  text-align: center;
 }
 
 #name {
@@ -146,6 +147,7 @@ img {
 
 #reviews-card {
   flex-direction: column;
+  text-align: left;
 }
 
 .App {

@@ -52,10 +52,10 @@ export const Movie = (props) => {
           <h5 className="card-title" id="review-name">
             Reviews for {props.movie.name}:
           </h5>
-          <p id="review-list">
+          <span id="review-list">
             <ReviewList reviews={reviews} />
             {props.movie.reviews}
-          </p>
+          </span>
         </div>
       </div>
     </div>
